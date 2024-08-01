@@ -1,0 +1,9 @@
+.listItem {
+  padding-inline: 0;
+  border-top: 0.0125vw solid grey;
+}
+.listItem span {
+  padding-inline: 0.75vw;
+}
+
+/*# sourceMappingURL=goodsList.module.css.map */

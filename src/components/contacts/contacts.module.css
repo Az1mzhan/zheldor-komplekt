@@ -1,0 +1,70 @@
+.contactsField {
+  display: flex;
+  justify-content: center;
+  background-image: url("../../../assets/bg_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.contactsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vh;
+  width: 23.75vw;
+  margin: 5vh 0;
+  padding: 5vh 2.5vw;
+  background-color: #1976d2 !important;
+}
+
+.contactsContainerTitle {
+  text-align: center;
+}
+
+.contactsContainerTitle, .contactsTitle {
+  font-weight: bold !important;
+}
+
+.contactsList {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 25vw;
+  margin-bottom: 2.5vh;
+}
+.contactsList > div {
+  display: inherit;
+  align-items: center;
+  gap: 2.5vw;
+  margin-top: 2.5vh;
+}
+
+@media screen and (min-width: 600px) and (max-width: 899px) {
+  .contactsContainer {
+    width: 35vw;
+  }
+  .contactsList {
+    width: 100%;
+  }
+  .contactsList > div {
+    padding-inline: 2.5vw;
+    gap: 3vw;
+  }
+  .contactsList > div > div {
+    width: 25vw;
+  }
+}
+@media screen and (max-width: 575px) {
+  .contactsContainer {
+    width: 85vw;
+  }
+  .contactsList {
+    width: 100%;
+  }
+  .contactsList > div {
+    gap: 5vw;
+  }
+}
+
+/*# sourceMappingURL=contacts.module.css.map */

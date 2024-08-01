@@ -1,0 +1,40 @@
+.navbar, .toolbar {
+  width: 100%;
+}
+
+.navbar {
+  padding-inline: 20px;
+}
+
+.toolbar {
+  justify-content: space-between;
+}
+
+.navbar, .linksContainer {
+  display: flex;
+}
+
+.linksContainer {
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.navElem {
+  font-weight: bold !important;
+  letter-spacing: 0.05em !important;
+  text-decoration: none !important;
+  transition: all 0.2s ease-out;
+}
+.navElem:hover {
+  opacity: 0.875;
+  text-decoration: underline !important;
+}
+
+.drawerContainer {
+  display: flex;
+  flex-direction: column;
+  padding-left: 2.5vw;
+  padding-top: 5vh;
+}
+
+/*# sourceMappingURL=navbar.module.css.map */

@@ -1,0 +1,29 @@
+.catalogue {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5vh;
+  padding: 5vh;
+  background-color: #F5F5F5;
+}
+
+.catalogueTitle {
+  text-align: center;
+  font-weight: bold !important;
+}
+
+.productsContainer {
+  display: flex;
+  width: 87.5vw;
+  flex-wrap: wrap;
+  flex: auto;
+  gap: 5vh;
+}
+
+@media screen and (max-width: 575px) {
+  .productsContainer {
+    width: 75vw;
+  }
+}
+
+/*# sourceMappingURL=catalogue.module.css.map */
