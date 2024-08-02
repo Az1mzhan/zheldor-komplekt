@@ -24,30 +24,27 @@ export const ProductCard: FC<Props> = ({ product }: Props) => {
 
   const handleNestedList = () => {
     setOpen(!open)
-    console.log(open)
   }
 
   return (
     <>
-      <Card className={styles.productCard} onClick={handleNestedList}>
+      <Card
+        className={styles.productCard}
+        onClick={handleNestedList}
+        sx={{ alignSelf: open ? "stretch" : "flex-start" }}
+      >
         <CardActionArea>
           <CardMedia
             className={styles.cardMedia}
-            sx={{ height: { xs: "25vh !important" } }}
             component="img"
             image={product.img}
             alt={product.title}
           />
           <CardContent className={styles.cardContent}>
-            <List className={styles.cardList} component="nav">
-              <ListItemButton>
-                <ListItemText
-                  className={styles.productTitle}
-                  primary={product.title}
-                />
-              </ListItemButton>
+            <div className={styles.cardList}>
+              <p className={styles.productTitle}>{product.title}</p>
               {open ? <ExpandLess /> : <ExpandMore />}
-            </List>
+            </div>
             <Collapse in={open}>
               <GoodsList goodsNamings={product.goodsNamings} />
             </Collapse>

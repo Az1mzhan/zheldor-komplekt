@@ -1,28 +1,23 @@
-.navbar, .toolbar
-  width: 100%
-
-.navbar
-  padding-inline: 20px
-
-.toolbar
-  justify-content: space-between
-
-.navbar, .linksContainer
+.navContentContainer
+  max-width: 1280px
   display: flex
+  justify-content: space-between
+  align-items: center
+  margin: 0 auto
 
 .linksContainer
-  justify-content: flex-end
   gap: 20px
 
 .navElem
-  font-weight: bold !important
-  letter-spacing: 0.05em !important
-  text-decoration: none !important
+  color: white
+  font-size: 16px
+  font-weight: bold
+  text-decoration: none
   transition: all .2s ease-out
 
   &:hover
     opacity: 0.875
-    text-decoration: underline !important
+    text-decoration: underline
 
 .drawerContainer
   display: flex

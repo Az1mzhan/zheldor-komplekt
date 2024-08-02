@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .contactsFormContainer {
   display: flex;
   flex-direction: column;
@@ -7,23 +8,32 @@
 
 .contactsForm {
   display: flex;
-  flex-wrap: wrap;
-  gap: 5vh;
-  width: 20vw;
-  margin-bottom: 5vh;
+  gap: 37.5px;
+  width: 300px;
+  margin-bottom: 50px;
 }
-
-.contactsFormTitle {
-  margin: 5vh 0 !important;
-  text-align: center;
-  font-weight: bold !important;
+.contactsForm input {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .formSubmitBtn {
-  width: 10vw;
+  width: 200px;
   margin-inline: auto;
-  padding: 1.25vh 0 !important;
-  font-weight: bold !important;
+  padding: 15px 0;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.2s ease-out;
+}
+.formSubmitBtn:hover {
+  opacity: 0.75;
 }
 
 @media screen and (max-width: 575px) {

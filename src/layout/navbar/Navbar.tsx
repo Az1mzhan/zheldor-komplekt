@@ -1,15 +1,7 @@
 import { useState } from "react"
 import { useSections } from "../../hooks/useSections/useSections"
 import type { FC } from "react"
-import {
-  AppBar,
-  Box,
-  Container,
-  Drawer,
-  IconButton,
-  Link,
-  Toolbar,
-} from "@mui/material"
+import { Box, Drawer, IconButton, Link } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu"
 import logo from "../../../assets/logo1_white.svg"
 import styles from "./navbar.module.css"
@@ -24,31 +16,22 @@ export const Navbar: FC = () => {
 
   return (
     <>
-      <AppBar className={styles.navbar} position="sticky">
-        <Toolbar
-          className={styles.toolbar}
-          // sx={{
-          //   justifyContent: {
-          //     xs: "flex-start",
-          //     sm: "flex-start",
-          //     md: "space-around",
-          //   },
-          // }}
-          disableGutters
-        >
-          <img width={100} height={100} className={styles.logo} src={logo} />
-          <Box className={styles.linksContainer}>
+      <nav>
+        <div className={styles.navContentContainer}>
+          <img width={125} height={125} src={logo} />
+          <Box
+            className={styles.linksContainer}
+            sx={{ display: { xs: "none", sm: "none", md: "flex" } }}
+          >
             {sections.map((section, id) => (
-              <Link
+              <a
                 className={styles.navElem}
-                variant="subtitle1"
                 color="inherit"
                 href={section.url}
                 key={id}
-                sx={{ display: { sm: "none", md: "block" } }}
               >
                 {section.title}
-              </Link>
+              </a>
             ))}
           </Box>
           <IconButton
@@ -56,7 +39,7 @@ export const Navbar: FC = () => {
             aria-label="open drawer"
             edge="start"
             onClick={handleDrawerToggle}
-            sx={{ display: { md: "none" } }}
+            sx={{ display: { sm: "block", md: "none" } }}
           >
             <MenuIcon />
           </IconButton>
@@ -65,37 +48,26 @@ export const Navbar: FC = () => {
             container={window.document.body}
             open={mobileOpen}
             onClose={handleDrawerToggle}
-            // PaperProps={{
-            //   sx: {
-            //     width: { sm: "25vw", xs: "50vw" },
-            //   },
-            // }}
             ModalProps={{ keepMounted: true }}
             sx={{
               display: { sm: "block", md: "none" },
             }}
           >
-            <Box className={styles.drawerContainer}>
+            <div className={styles.drawerContainer}>
               {sections.map((section, id) => (
                 <Link
                   className={styles.navElem}
                   color="inherit"
                   href={section.url}
                   key={id}
-                  // sx={{
-                  //   fontSize: {
-                  //     sm: "2vw !important",
-                  //     xs: "3.75vw !important",
-                  //   },
-                  // }}
                 >
                   {section.title}
                 </Link>
               ))}
-            </Box>
+            </div>
           </Drawer>
-        </Toolbar>
-      </AppBar>
+        </div>
+      </nav>
     </>
   )
 }

@@ -1,23 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 .productCard {
-  width: 20vw !important;
+  width: 400px;
+  border-radius: 15px;
 }
 
 .cardMedia {
-  height: 15vw;
+  height: 200px;
 }
 
 .cardContent {
-  padding: 0 !important;
+  padding: 0;
 }
 
 .cardList {
   display: flex;
   align-items: center;
-  padding-inline: 0.5vw !important;
+  padding: 15px;
 }
 
-.productTitle > span {
-  font-weight: bold !important;
+.productTitle {
+  background-color: transparent;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 @media screen and (max-width: 575px) {

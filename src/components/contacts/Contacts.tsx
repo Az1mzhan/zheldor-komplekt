@@ -1,4 +1,4 @@
-import { Box, Paper, Typography } from "@mui/material"
+import { Paper, Typography } from "@mui/material"
 import NearMeIcon from "@mui/icons-material/NearMe"
 import PhoneIcon from "@mui/icons-material/Phone"
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail"
@@ -7,45 +7,41 @@ import styles from "./contacts.module.css"
 export const Contacts = () => {
   return (
     <>
-      <Box className={styles.contactsField}>
+      <div className={styles.contactsField}>
         <Paper className={styles.contactsContainer} elevation={24}>
-          <Typography className={styles.contactsContainerTitle} variant="h4">
-            Наши контакты
-          </Typography>
-          <Box className={styles.contactsList}>
-            <Box>
+          <h2 className={styles.contactsContainerTitle}>Наши контакты</h2>
+          <div className={styles.contactsList}>
+            <div>
               <NearMeIcon />
-              <Box>
-                <Typography className={styles.contactsTitle}>
-                  Адрес офиса
-                </Typography>
+              <div>
+                <h3 className={styles.contactsTitle}>Адрес офиса</h3>
                 <Typography>
                   630054, Россия, Новосибирская область, 3-й пер. Крашенникова
                   3/1, офис 004
                 </Typography>
-              </Box>
-            </Box>
-            <Box>
+              </div>
+            </div>
+            <div>
               <PhoneIcon />
-              <Box>
+              <div>
                 <Typography className={styles.contactsTitle}>
                   Телефоны
                 </Typography>
                 <Typography>+7-913-912-90-56</Typography>
-              </Box>
-            </Box>
-            <Box>
+              </div>
+            </div>
+            <div>
               <AlternateEmailIcon />
-              <Box>
+              <div>
                 <Typography className={styles.contactsTitle}>
                   Эл. почта
                 </Typography>
                 <Typography>2149056@bk.ru</Typography>
-              </Box>
-            </Box>
-          </Box>
+              </div>
+            </div>
+          </div>
         </Paper>
-      </Box>
+      </div>
     </>
   )
 }

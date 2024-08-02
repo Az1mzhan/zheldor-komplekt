@@ -2,16 +2,15 @@ import { Navbar } from "./layout/navbar/Navbar"
 import { Footer } from "./layout/footer/Footer"
 import { router } from "./Routes"
 import { RouterProvider } from "react-router-dom"
-import { Box } from "@mui/material"
-import "../App.css"
+import "./App.css"
 
 const App = () => {
   return (
     <>
-      <Box className="app-container">
-        <Navbar />
+      <Navbar />
+      <div className="app-container">
         <RouterProvider router={router} />
-      </Box>
+      </div>
       <Footer />
     </>
   )

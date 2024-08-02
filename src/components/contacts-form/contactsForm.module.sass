@@ -1,3 +1,5 @@
+@use "../../styles/_styles.sass" as styles
+
 .contactsFormContainer
   display: flex
   flex-direction: column
@@ -6,21 +8,31 @@
 
 .contactsForm
   display: flex
-  flex-wrap: wrap
-  gap: 5vh
-  width: 20vw
-  margin-bottom: 5vh
+  gap: 37.5px
+  width: 300px
+  margin-bottom: 50px
 
-.contactsFormTitle
-  margin: 5vh 0 !important
-  text-align: center
-  font-weight: bold !important
+  input
+    font-family: styles.$montserrat
+    font-weight: 500
+    font-size: 16px
 
 .formSubmitBtn
-  width: 10vw
+  width: 200px
   margin-inline: auto
-  padding: 1.25vh 0 !important
-  font-weight: bold !important
+  padding: 15px 0
+  background-color: styles.$primaryColor
+  color: white
+  border: none
+  border-radius: 10px
+  text-align: center
+  font-family: styles.$montserrat
+  font-weight: 600
+  font-size: 14px
+  transition: all .2s ease-out
+
+  &:hover
+    opacity: 0.75
 
 @media screen and (max-width: 575px)
   .contactsForm
