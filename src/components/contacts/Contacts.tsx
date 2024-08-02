@@ -1,4 +1,4 @@
-import { Paper, Typography } from "@mui/material"
+import { Typography } from "@mui/material"
 import NearMeIcon from "@mui/icons-material/NearMe"
 import PhoneIcon from "@mui/icons-material/Phone"
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail"
@@ -8,7 +8,7 @@ export const Contacts = () => {
   return (
     <>
       <div className={styles.contactsField}>
-        <Paper className={styles.contactsContainer} elevation={24}>
+        <div className={styles.contactsContainer}>
           <h2 className={styles.contactsContainerTitle}>Наши контакты</h2>
           <div className={styles.contactsList}>
             <div>
@@ -24,23 +24,19 @@ export const Contacts = () => {
             <div>
               <PhoneIcon />
               <div>
-                <Typography className={styles.contactsTitle}>
-                  Телефоны
-                </Typography>
+                <h3 className={styles.contactsTitle}>Телефоны</h3>
                 <Typography>+7-913-912-90-56</Typography>
               </div>
             </div>
             <div>
               <AlternateEmailIcon />
               <div>
-                <Typography className={styles.contactsTitle}>
-                  Эл. почта
-                </Typography>
+                <h3 className={styles.contactsTitle}>Эл. почта</h3>
                 <Typography>2149056@bk.ru</Typography>
               </div>
             </div>
           </div>
-        </Paper>
+        </div>
       </div>
     </>
   )

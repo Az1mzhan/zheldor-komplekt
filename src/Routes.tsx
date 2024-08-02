@@ -20,6 +20,13 @@ const ContactsPage = lazy(() =>
   }),
 )
 
+const ErrorPage = lazy(() =>
+  import("./pages/error-page/ErrorPage").catch(err => {
+    console.error(err)
+    return { default: CircularProgress }
+  }),
+)
+
 export const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/">
@@ -36,6 +43,15 @@ export const router = createBrowserRouter(
         element={
           <Suspense fallback={<CircularProgress />}>
             <ContactsPage />
+          </Suspense>
+        }
+      />
+      <Route
+        path="*"
+        exact={true}
+        element={
+          <Suspense fallback={<CircularProgress />}>
+            <ErrorPage />
           </Suspense>
         }
       />

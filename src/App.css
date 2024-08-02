@@ -8,6 +8,7 @@ body {
 .app-container {
     max-width: 1280px;
     margin: 0 auto;
+    padding-bottom: 150px;
 }
 
 nav {
@@ -27,4 +28,23 @@ h1, h2, h3, h4, h5, h6, p, a {
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 32px;
+}
+
+.cardContent {
+    width: 80%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+.infoLineContent {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .cardContent {
+        width: 75%;
+    }
 }

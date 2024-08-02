@@ -8,9 +8,6 @@ import {
   CardContent,
   CardActionArea,
   Collapse,
-  List,
-  ListItemButton,
-  ListItemText,
 } from "@mui/material"
 import { ExpandLess, ExpandMore } from "@mui/icons-material"
 import styles from "./productCard.module.css"
@@ -31,7 +28,10 @@ export const ProductCard: FC<Props> = ({ product }: Props) => {
       <Card
         className={styles.productCard}
         onClick={handleNestedList}
-        sx={{ alignSelf: open ? "stretch" : "flex-start" }}
+        sx={{
+          alignSelf: open ? "stretch" : "flex-start",
+          borderRadius: "15px",
+        }}
       >
         <CardActionArea>
           <CardMedia

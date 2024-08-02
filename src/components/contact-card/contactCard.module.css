@@ -1,8 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 .contactCard {
+  width: 800px;
+  min-height: 200px;
+}
+
+.contactCardContent {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding: 1vw;
+  padding: 10px 0;
 }
 
 .cardFirstLine {
@@ -10,6 +18,25 @@
   align-items: center;
   gap: 0.5vw;
   margin: 1.25vh 0;
+}
+
+.contactTitle, .contactDescription {
+  font-family: "Montserrat", sans-serif;
+}
+
+.contactTitle {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.contactDescription {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 600px) {
+  .contactCard {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=contactCard.module.css.map */

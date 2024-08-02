@@ -1,11 +1,9 @@
-import { Box, Typography } from "@mui/material"
+import type { FC } from "react"
 
-export const PhoneCardContent = () => {
+export const PhoneCardContent: FC = () => {
   return (
     <>
-      <Box>
-        <Typography>+7-913-912-90-56</Typography>
-      </Box>
+      <p className="cardContent">+7-913-912-90-56</p>
     </>
   )
 }

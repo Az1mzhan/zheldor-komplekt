@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["contactsGroup.module.sass"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;EACA;EACA;EACA;;;AAEF;EACE;EACA;;;AAEF;EACE;EACA;EACA;EACA","file":"contactsGroup.module.css"}
+{"version":3,"sourceRoot":"","sources":["../../styles/_styles.sass","contactsGroup.module.sass"],"names":[],"mappings":"AAAQ;AACA;ACCR;EACE;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAEF;EACE;EACA;EACA;EACA;;;AAEF;EACE;;;AAEF;EACE;IACE","file":"contactsGroup.module.css"}

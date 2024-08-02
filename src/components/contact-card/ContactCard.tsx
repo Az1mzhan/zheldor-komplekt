@@ -1,6 +1,6 @@
 import type { FC } from "react"
 import type { ContactObject } from "../../types/ContactObject"
-import { Box, Card, Typography } from "@mui/material"
+import { Box, Card, CardContent, Typography } from "@mui/material"
 import styles from "./contactCard.module.css"
 
 interface Props {
@@ -10,18 +10,14 @@ interface Props {
 export const ContactCard: FC<Props> = ({ contact }: Props) => {
   return (
     <>
-      <Card
-        className={styles.contactCard}
-        sx={{
-          width: { sm: "18vw !important", xs: "90% !important" },
-          padding: { sm: "1vw !important", xs: "2.5vh 2vw !important" },
-        }}
-      >
-        <Box className={styles.cardFirstLine}>
-          {contact.icon}
-          <Typography variant="h6">{contact.title}</Typography>
-        </Box>
-        {contact.content}
+      <Card className={styles.contactCard} sx={{ borderRadius: "15px" }}>
+        <CardContent className={styles.contactCardContent}>
+          <Box className={styles.cardFirstLine}>
+            {contact.icon}
+            <h3 className={styles.contactTitle}>{contact.title}</h3>
+          </Box>
+          {contact.content}
+        </CardContent>
       </Card>
     </>
   )

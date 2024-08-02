@@ -1,34 +1,42 @@
+import type { FC } from "react"
 import { useContacts } from "../../hooks/useContacts/useContacts"
 import { ContactCard } from "../contact-card/ContactCard"
-import { Box, Typography } from "@mui/material"
+import { Box } from "@mui/material"
+import Carousel from "react-material-ui-carousel"
 import styles from "./contactsGroup.module.css"
 
-export const ContactsGroup = () => {
+export const ContactsGroup: FC = () => {
   const contacts = useContacts()
 
   return (
     <>
-      <Box
-        className={styles.contactsGroupContainer}
-        sx={{
-          padding: { sm: "27.5vh 0 !important", xs: "12.5vh 0 !important" },
-        }}
-      >
-        <Typography className={styles.contactsGroupTitle} variant="h4">
-          Контактная информация
-        </Typography>
-        <Box
-          className={styles.contactsContainer}
-          sx={{
-            flexDirection: { sm: "row !important", xs: "column !important" },
-            alignItems: { sm: "stretch !important", xs: "center !important" },
+      <div className={styles.contactsGroupContainer}>
+        <h1 className="sectionTitle">Контактная информация</h1>
+        <Carousel
+          className={styles.contactsCarousel}
+          navButtonsAlwaysVisible={true}
+          navButtonsProps={{
+            style: {
+              backgroundColor: "rgba(0, 0, 0, 0.2)",
+              color: "white",
+            },
+          }}
+          indicatorIconButtonProps={{
+            style: {
+              color: "white",
+            },
+          }}
+          activeIndicatorIconButtonProps={{
+            style: {
+              color: "rgba(255,255,255,0.5)",
+            },
           }}
         >
           {contacts.map((contact, id) => (
             <ContactCard contact={contact} key={id} />
           ))}
-        </Box>
-      </Box>
+        </Carousel>
+      </div>
     </>
   )
 }

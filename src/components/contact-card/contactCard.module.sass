@@ -1,11 +1,32 @@
+@use "../../styles/styles" as styles
+
 .contactCard
+  width: 800px
+  min-height: 200px
+
+.contactCardContent
   display: flex
   flex-direction: column
+  justify-content: center
   align-items: center
-  padding: 1vw
+  padding: 10px 0
 
 .cardFirstLine
   display: flex
   align-items: center
   gap: 0.5vw
   margin: 1.25vh 0
+
+.contactTitle, .contactDescription
+  font-family: styles.$montserrat
+
+.contactTitle
+  font-weight: 600
+  font-size: 16px
+
+.contactDescription
+  font-size: 14px
+
+@media screen and (max-width: 600px)
+  .contactCard
+    width: 100%

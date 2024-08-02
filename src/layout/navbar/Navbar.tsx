@@ -1,7 +1,7 @@
+import type { FC } from "react"
 import { useState } from "react"
 import { useSections } from "../../hooks/useSections/useSections"
-import type { FC } from "react"
-import { Box, Drawer, IconButton, Link } from "@mui/material"
+import { Box, Drawer, IconButton } from "@mui/material"
 import MenuIcon from "@mui/icons-material/Menu"
 import logo from "../../../assets/logo1_white.svg"
 import styles from "./navbar.module.css"
@@ -18,18 +18,13 @@ export const Navbar: FC = () => {
     <>
       <nav>
         <div className={styles.navContentContainer}>
-          <img width={125} height={125} src={logo} />
+          <img width={100} height={100} src={logo} />
           <Box
             className={styles.linksContainer}
             sx={{ display: { xs: "none", sm: "none", md: "flex" } }}
           >
             {sections.map((section, id) => (
-              <a
-                className={styles.navElem}
-                color="inherit"
-                href={section.url}
-                key={id}
-              >
+              <a className={styles.navElem} href={section.url} key={id}>
                 {section.title}
               </a>
             ))}
@@ -49,20 +44,16 @@ export const Navbar: FC = () => {
             open={mobileOpen}
             onClose={handleDrawerToggle}
             ModalProps={{ keepMounted: true }}
+            PaperProps={{ sx: { width: "62.5%" } }}
             sx={{
               display: { sm: "block", md: "none" },
             }}
           >
             <div className={styles.drawerContainer}>
               {sections.map((section, id) => (
-                <Link
-                  className={styles.navElem}
-                  color="inherit"
-                  href={section.url}
-                  key={id}
-                >
+                <a className={styles.drawerElem} href={section.url} key={id}>
                   {section.title}
-                </Link>
+                </a>
               ))}
             </div>
           </Drawer>

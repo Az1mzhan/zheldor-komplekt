@@ -1,11 +1,9 @@
-import { Box, Typography } from "@mui/material"
+import type { FC } from "react"
 
-export const EmailCardContent = () => {
+export const EmailCardContent: FC = () => {
   return (
     <>
-      <Box>
-        <Typography>2149056@bk.ru</Typography>
-      </Box>
+      <p className="cardContent">2149056@bk.ru</p>
     </>
   )
 }
