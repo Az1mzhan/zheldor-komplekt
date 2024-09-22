@@ -1,7 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://yourdomain.com/sitemap.xml
-
-# Google site verification
-google-site-verification: aJt-ryilq7pe3aKgyFyMNxsmXkI87y6HQT_X4vAG1lk
+Sitemap: https://www.zheldor-komplekt.ru/sitemap.xml
