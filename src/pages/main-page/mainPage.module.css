@@ -1,0 +1,9 @@
+.documentsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 20px;
+  row-gap: 40px;
+}
+
+/*# sourceMappingURL=mainPage.module.css.map */
