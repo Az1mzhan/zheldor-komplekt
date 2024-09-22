@@ -18,8 +18,17 @@ nav {
     font-family: "Montserrat", sans-serif;
 }
 
+img {
+    user-select: none;
+    pointer-events: none;
+}
+
 h1, h2, h3, h4, h5, h6, p, a {
     letter-spacing: 0.05em;
+}
+
+.section {
+    margin-bottom: 50px;
 }
 
 .sectionTitle {
@@ -46,5 +55,11 @@ h1, h2, h3, h4, h5, h6, p, a {
 @media screen and (max-width: 600px) {
     .cardContent {
         width: 75%;
+    }
+}
+
+@media print {
+    * {
+        visibility: hidden;
     }
 }

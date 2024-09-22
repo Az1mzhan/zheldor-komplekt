@@ -46,7 +46,7 @@ export const ProductCard: FC<Props> = ({ product }: Props) => {
               {open ? <ExpandLess /> : <ExpandMore />}
             </div>
             <Collapse in={open}>
-              <GoodsList goodsNamings={product.goodsNamings} />
+              <GoodsList goods={product.goods} />
             </Collapse>
           </CardContent>
         </CardActionArea>

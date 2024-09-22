@@ -1,5 +1,5 @@
 import { Product } from "../../types/Product"
-import { selectGoodsNamings } from "./selectGoodsNamings"
+import { selectGoods } from "./selectGoods"
 import plates from "../../../assets/plates.png"
 import railway_covers from "../../../assets/railway_covers.png"
 import railway_rails from "../../../assets/railway_rails.png"
@@ -25,6 +25,6 @@ export const selectProductParams = (product: Product) => {
   return {
     url: `/${Object.keys(Product)[Object.values(Product).indexOf(product)].toLowerCase()}`,
     img: selectIcon(product),
-    goodsNamings: selectGoodsNamings(product),
+    goods: selectGoods(product),
   }
 }

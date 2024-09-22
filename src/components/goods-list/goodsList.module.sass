@@ -1,6 +1,24 @@
-.listItem
-  padding-inline: 0
-  border-top: .0125vw solid grey
+@use "../../styles/styles" as styles
 
-  span
-    padding-inline: 0.75vw
+//.listItem
+//  padding-inline: 0
+//  border-top: .0125vw solid grey
+//
+//  span
+//    padding-inline: 0.75vw
+
+.goodsList
+  padding-inline: 30px
+  list-style: none
+
+.listItem
+  font-family: styles.$montserrat
+  border-top: 1px solid grey
+
+  p
+    &:first-child
+      font-weight: bold
+
+    &:last-child
+      font-size: 12px
+      font-weight: 500

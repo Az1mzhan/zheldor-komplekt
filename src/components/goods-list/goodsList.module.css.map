@@ -1,1 +1,1 @@
-{"version":3,"sourceRoot":"","sources":["goodsList.module.sass"],"names":[],"mappings":"AAAA;EACE;EACA;;AAEA;EACE","file":"goodsList.module.css"}
+{"version":3,"sourceRoot":"","sources":["../../styles/_styles.sass","goodsList.module.sass"],"names":[],"mappings":"AAAQ;AACA;ACQR;EACE;EACA;;;AAEF;EACE,aDTW;ECUX;;AAGE;EACE;;AAEF;EACE;EACA","file":"goodsList.module.css"}

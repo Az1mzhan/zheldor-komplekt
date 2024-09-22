@@ -4,9 +4,7 @@ import type { ProductObject } from "../../types/ProductObject"
 import { Product } from "../../types/Product"
 
 export const useProducts = () => {
-  const [productTitles, setProductTitles] = useState<Product[]>(
-    Object.values(Product),
-  )
+  const productTitles = Object.values(Product)
   const [products, setProducts] = useState<ProductObject[]>([])
 
   useEffect(() => {
